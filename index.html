@@ -30,30 +30,37 @@
         <section>
             <!--áreas de texto-->
             <div class="contenedor-principal">
-                <input class="placeholder-text" type="text" placeholder="Ingrese el texto aquí">
+                <input class="placeholder-text" type="text" placeholder="Ingrese el texto aquí" id="input-txt">
             </div>
             <div class="contenedor-mensaje">
-                <img src="./imgs/ilustracion.png" alt="No se encontró un mensaje">
-                <p class="mensaje-xl">Ningún mensaje fue encontrado</p>
-                <p class="mensaje-sm">Ingresa el texto que desees encriptar o desencriptar</p>
+                <img src="./imgs/ilustracion.png" alt="No se encontró un mensaje" id="img-Mensaje">
+                <div id="mensaje-texto">
+                    <p class="mensaje-xl">Ningún mensaje fue encontrado</p>
+                    <p class="mensaje-sm">Ingresa el texto que desees encriptar o desencriptar</p>
+                </div>
                 <!--botón copiar-->
-                <button class="boton-copiar">Copiar</button>
+                <button class="boton-copiar" id="copiar">Copiar</button>
             </div>
             <!--botones y advertencia-->
             <p class="contenedor-principal advertencia d-flex align-items-center"><span
                     class="material-symbols-outlined me-2">error</span> Solo letras minúsculas y sin acentos</p>
             <div class="row ms-5 ps-5 contenedor-btn">
-                <button class="boton-encriptar col-2 me-4 ms-5">Encriptar</button>
-                <button class="boton-desencriptar col-2">Desencriptar</button>
+                <button class="boton-encriptar col-2 me-4 ms-5" id="encriptar">Encriptar</button>
+                <button class="boton-desencriptar col-2" id="desencriptar">Desencriptar</button>
             </div>
         </section>
     </main>
 
     <!--pie de página-->
     <footer class="d-flex justify-content-between align-items-center mt-5 pt-5">
-        <p>&#169; Challenge ONE - 2023</p>
+        <p>&#169; Challenge ONE - 2023 | Desarrollado por Jennifer Rodríguez</p>
         <img src="./imgs/logo.png" alt="logo">
     </footer>
+
+    <!--ventana de notificación-->
+    <div id="ventana-copiado" class="ventana-oculta">
+        <p>¡El texto se ha copiado al portapapeles!</p>
+    </div>
 
     <!--javascript-->
     <script src="./js/main.js"></script>

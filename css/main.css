@@ -53,7 +53,7 @@ body {
 input {
     position: static;
     width: 680px;
-    height: 560px;
+    height: 360px;
     line-height: 48px;
     border: none;
     padding-top: 10px;
@@ -72,7 +72,7 @@ input:focus {
 .contenedor-mensaje {
     position: absolute;
     width: 400px;
-    height: 944px;
+    height: 715px;
     left: 1000px;
     top: 40px;
     background: #FFFFFF;
@@ -81,7 +81,7 @@ input:focus {
 }
 
 .contenedor-mensaje img {
-    margin: 200px 32px 32px 32px;
+    margin: 120px 32px 32px 32px;
 }
 
 /*botones*/
@@ -91,16 +91,25 @@ input:focus {
     justify-content: center;
     padding: 24px;
     margin: 32px;
-    position: absolute;
     width: 336px;
     height: 67px;
-    top: 815px;
+    top: 730px;
     border: 1px solid #0A3871;
     border-radius: 24px;
     font-size: 16px;
     color: #0A3871;
-    background: white;
+    background: #F3F5FC;
 }
+
+.boton-copiar {
+    display: none;
+}
+
+.boton-copiar:hover {
+    color: #F3F5FC;
+    background-color: #0A3871;
+}
+
 
 .boton-encriptar {
     display: flex;
@@ -115,6 +124,10 @@ input:focus {
     color: white;
 }
 
+.boton-encriptar:hover {
+    background-color: #368ab5;
+}
+
 .boton-desencriptar {
     display: flex;
     flex-direction: row;
@@ -126,6 +139,42 @@ input:focus {
     border: 1px solid #0A3871;
     border-radius: 24px;
     color: #0A3871;
+}
+
+.boton-desencriptar:hover {
+    color: #F3F5FC;
+    background-color: #368ab5;
+    border: none;
+}
+
+/*Ventana notificación*/
+#ventana-copiado {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #198754;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  font-weight: 600;
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  transform: translateY(20px);
+  pointer-events: none;
+}
+
+#ventana-copiado.mostrar {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.form-control {
+    text-align: center;
+    border: none !important;
+    padding-top: 40px;
 }
 
 /*Responsive Telefono*/
@@ -156,7 +205,8 @@ input:focus {
         flex-direction: column;
         position: relative;
         width: 360px;
-        height: 100px;
+        min-height: 100px;
+        height: auto;
         left: 0px;
         top: 40px;
         align-items: center;
@@ -191,6 +241,10 @@ input:focus {
 
     .boton-desencriptar {
         margin-top: 20px;
+    }
+
+    .boton-copiar {
+        margin: 20px 0px;
     }
 
     .contenedor-btn {
