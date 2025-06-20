@@ -2,6 +2,7 @@
 body {
     font-family: 'Inter', sans-serif;
     margin: 40px 84px;
+    background-color: #F3F5FC;
 }
 
 /*tipografía*/
@@ -11,6 +12,7 @@ body {
     font-size: 32px;
     font-weight: 400;
     color: #0A3871;
+    background-color: #F3F5FC;
 }
 
 .mensaje-xl {
@@ -52,13 +54,13 @@ input {
     position: static;
     width: 680px;
     height: 560px;
-    top: 0px;
     line-height: 48px;
     border: none;
     padding-top: 10px;
+    background-color: #F3F5FC;
 }
 
-input:focus{
+input:focus {
     outline: none;
     position: static;
     top: 0;
@@ -108,6 +110,7 @@ input:focus{
     width: 328px;
     height: 67px;
     background: #0A3871;
+    border: none;
     border-radius: 24px;
     color: white;
 }
@@ -123,4 +126,77 @@ input:focus{
     border: 1px solid #0A3871;
     border-radius: 24px;
     color: #0A3871;
+}
+
+/*Responsive Telefono*/
+
+@media (min-width: 368px) and (max-width: 1024px) {
+    body {
+        margin: 40px 15px;
+    }
+
+    input {
+        position: relative;
+        width: 300px;
+        height: 460px;
+    }
+
+    ::placeholder {
+        top: 0;
+        font-size: 24px;
+    }
+
+    .contenedor-principal {
+        margin-left: 5px;
+        margin-top: 98px;
+    }
+
+    .contenedor-mensaje {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 360px;
+        height: 100px;
+        left: 0px;
+        top: 40px;
+        align-items: center;
+    }
+
+    .contenedor-mensaje img {
+        display: none;
+    }
+
+    .mensaje-xl {
+        display: flex;
+        justify-content: center;
+        font-size: 16px;
+        line-height: 29px;
+        padding: 16px 0px 0px 0px;
+        margin: 0px;
+    }
+
+    .mensaje-sm {
+        display: flex;
+        justify-content: center;
+        font-size: 12px;
+        padding: 0px;
+    }
+
+    .boton-encriptar {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 0px !important;
+    }
+
+    .boton-desencriptar {
+        margin-top: 20px;
+    }
+
+    .contenedor-btn {
+        display: flex;
+        justify-content: center;
+        margin: auto !important;
+        padding: 0px !important;
+    }
 }
